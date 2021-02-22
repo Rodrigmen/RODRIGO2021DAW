@@ -1,0 +1,62 @@
+version: 1
+
+dn: dc=rodrigo,dc=local
+objectClass: dcObject
+objectClass: organization
+objectClass: top
+dc: rodrigo
+o: rodrigo
+
+dn: cn=admin,dc=rodrigo,dc=local
+objectClass: organizationalRole
+objectClass: simpleSecurityObject
+cn: admin
+userPassword:: e1NTSEF9ZWpSVlZiSGhNdXBGblFiWEtyQzlUeFViRko5SWdEeUg=
+description: LDAP administrator
+
+dn: ou=groups,dc=rodrigo,dc=local
+objectClass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=rodrigo,dc=local
+objectClass: organizationalUnit
+ou: people
+
+dn: cn=jefes,ou=groups,dc=rodrigo,dc=local
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: jefes
+uniqueMember: uid=zipi,ou=people,dc=rodrigo,dc=local
+
+dn: cn=gemelos,ou=groups,dc=rodrigo,dc=local
+objectClass: posixGroup
+cn: gemelos
+gidNumber: 2000
+memberUid: 
+
+dn: uid=zape,ou=people,dc=rodrigo,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: zape
+gidNumber: 2000
+homeDirectory: /home/zape
+sn: zape
+uid: zape
+uidNumber: 2001
+loginShell: /bin/bash
+userPassword:: e1NTSEF9Wm40L0U1ZitPcms3V1pGL2FscnBNdUhIR3VmQzN4MGs=
+
+dn: uid=zipi,ou=people,dc=rodrigo,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: zipi
+gidNumber: 2000
+homeDirectory: /home/zipi
+sn: zipi
+uid: zipi
+uidNumber: 2000
+loginShell: /bin/bash
+userPassword:: e1NTSEF9Wm40L0U1ZitPcms3V1pGL2FscnBNdUhIR3VmQzN4MGs=
+

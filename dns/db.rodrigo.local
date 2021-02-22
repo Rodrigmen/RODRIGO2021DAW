@@ -1,0 +1,20 @@
+;BIND data for rodrigo.local
+;          
+$TTL 604800
+@ IN SOA rrmxus.rodrigo.local. root.localhost. (
+                1    ; Serial
+                604800     ; Refresh
+                86400      ; Retry
+                2419200    ; Expire
+                3600 )     ; Negative cache TTL
+;
+@               IN NS rrmxus.rodrigo.local.
+; Registros Host
+@               IN A   192.168.3.218
+rrmxus         IN A   192.168.3.218
+rrmldap        IN A   192.168.3.118
+; Registros Alias
+daw201          IN CNAME   rrmxus.rodrigo.local. 
+daw202          IN CNAME   rrmxus.rodrigo.local.
+www.daw201          IN CNAME   rrmxus.rodrigo.local.
+www.daw202          IN CNAME   rrmxus.rodrigo.local.
